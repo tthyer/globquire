@@ -20,7 +20,7 @@ module.exports = function(pattern, options) {
     requirement.name = path.basename(file).replace(path.extname(file), '');
     requirement.module = require(path.resolve(file));
     if(options && options[requirement.name] && options[requirement.name] instanceof Array) {
-      requirement.results = requirement.module.apply(options[requirement.name]);
+      requirement.result = requirement.module.apply(options[requirement.name]);
     }
     return requirement;
   });
