@@ -1,0 +1,58 @@
+{
+  "rules": {
+    "comma-style": [
+      2,
+      "last"
+    ],
+    "complexity": [
+      2,
+      13
+    ],
+    "curly": 2,
+    "indent": [
+        1,
+        2
+    ],
+    "linebreak-style": [
+        2,
+        "unix"
+    ],
+    "new-cap": 2,
+    "no-caller": 2,
+    "no-cond-assign": [
+      2,
+      "except-parens"
+    ],
+    "no-console": 0,
+    "no-empty": 2,
+    "no-eq-null": 2,
+    "no-loop-func": 2,
+    "no-mixed-spaces-and-tabs": 2,
+    "no-undef": 2,
+    "no-unused-expressions": 2,
+    "no-unused-vars": 2,
+    "no-use-before-define": 2,
+    "one-var": [
+      2,
+      "never"
+    ],
+    "quotes": [
+        2,
+        "single"
+    ],
+    "semi": [
+        2,
+        "always"
+    ],
+    "strict": [
+      2,
+      "global"
+    ]
+  },
+  "env": {
+    "es6": true,
+    "browser": false,
+    "node": true
+  },
+  "extends": "eslint:recommended"
+}
