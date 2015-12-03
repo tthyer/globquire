@@ -1,5 +1,5 @@
 {
-  "name": "require-glob",
+  "name": "globquire",
   "version": "0.0.1",
   "description": "require a group of files based on a glob pattern",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tthyer/require-glob.git"
+    "url": "git+https://github.com/tthyer/globquire.git"
   },
   "keywords": [
     "nodejs",
@@ -18,9 +18,9 @@
   "author": "T. Thyer <tmthyer@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tthyer/require-glob/issues"
+    "url": "https://github.com/tthyer/globquire/issues"
   },
-  "homepage": "https://github.com/tthyer/require-glob#readme",
+  "homepage": "https://github.com/tthyer/globquire#readme",
   "dependencies": {
     "glob": "^6.0.1"
   },
