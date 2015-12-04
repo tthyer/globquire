@@ -17,11 +17,18 @@ module.exports = function(pattern, options) {
   let requirements = glob.sync(pattern).map(function(file) {
     let requirement = {};
     requirement.path = file;
-    requirement.name = path.basename(file).replace(path.extname(file), '');
+    let name = path.basename(file).replace(path.extname(file), '');
     requirement.module = require(path.resolve(file));
-    if(options && options[requirement.name] && options[requirement.name] instanceof Array) {
-      requirement.result = requirement.module.apply(options[requirement.name]);
+    let args = !options ? null : 
+                          options[name] ? options[name] : 
+                                          options['*'] ? options['*'] : null;
+    if(args) {
+      if(!(args instanceof Array)) {
+        args = [args];
+      }
+      requirement.result = requirement.module.apply(null, args);
     }
+    requirement.name = name;
     return requirement;
   });
   return internals.indexBy(requirements, 'name');
