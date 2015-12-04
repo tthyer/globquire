@@ -26,7 +26,9 @@ module.exports = function(pattern, options) {
       if(!(args instanceof Array)) {
         args = [args];
       }
-      requirement.result = requirement.module.apply(null, args);
+      if(typeof requirement.module === 'function') {
+        requirement.result = requirement.module.apply(null, args);
+      }
     }
     requirement.name = name;
     return requirement;
