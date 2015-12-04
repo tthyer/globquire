@@ -11,7 +11,7 @@ test('requiring files', function(t) {
 
 test('requiring files and executing one', function(t) {
   let str = 'test';
-  let required = globquire(__dirname + '/fixtures/**/*.js', { bar: [str] } );
+  let required = globquire(__dirname + '/fixtures/**/*.js', { args: { bar: [str] } });
   t.ok(required.bar && required.foo && required.bar.module && required.foo.module, 'has expected modules');
   t.equal(required.bar.result, str, 'has expected bar result');
   t.end();
@@ -19,7 +19,7 @@ test('requiring files and executing one', function(t) {
 
 test('requiring files and executing all with common args', function(t) {
   let str = 'test';
-  let required = globquire(__dirname + '/fixtures/**/*.js', { '*': [str] } );
+  let required = globquire(__dirname + '/fixtures/**/*.js', { args: { '*': [str] } });
   t.ok(required.bar && required.foo && required.bar.module && required.foo.module, 'has expected modules');
   t.equal(required.bar.result, str, 'has expected bar result');
   t.equal(required.foo.result, str, 'has expected foo result');
