@@ -1,6 +1,6 @@
 {
   "name": "globquire",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "require a group of files based on a glob pattern",
   "main": "index.js",
   "scripts": {
@@ -26,5 +26,8 @@
   },
   "devDependencies": {
     "tape": "^4.2.2"
+  },
+  "engines": {
+    "node": ">=4.0.0"
   }
 }
