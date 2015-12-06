@@ -1,8 +1,11 @@
 # globquire
+
+[![Build Status](https://travis-ci.org/tthyer/globquire.svg?branch=master)](https://travis-ci.org/tthyer/globquire)
+
 Allows requiring a group of files using a [glob](https://github.com/isaacs/node-glob) pattern, optionally execute it, and returns reference objects containing name, path, module, and results.
 
 ## use
-`const requirements = requireGlob('/my/javascript/files/**/*.js');`
+`const requirements = globquire('/my/javascript/files/**/*.js');`
 
 The result returned by `globquire` will look like this:
 ```
