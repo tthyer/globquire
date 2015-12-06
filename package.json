@@ -4,7 +4,8 @@
   "description": "require a group of files based on a glob pattern",
   "main": "index.js",
   "scripts": {
-    "test": "tape 'test/*.js'"
+    "test": "tape 'test/*.js'",
+    "test-travis": "./node_modules/istanbul/lib/cli.js cover tape './test/*.js'"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,8 @@
     "glob": "^6.0.1"
   },
   "devDependencies": {
+    "coveralls": "^2.11.4",
+    "istanbul": "^0.4.1",
     "tape": "^4.2.2"
   },
   "engines": {
