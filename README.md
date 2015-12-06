@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/tthyer/globquire.svg?branch=master)](https://travis-ci.org/tthyer/globquire)
 
-[![Coverage Status](https://coveralls.io/repos/tthyer/globquire/badge.svg)](https://coveralls.io/r/tthyer/globquire)
+[![Coverage Status](https://coveralls.io/repos/tthyer/globquire/badge.svg?branch=master&service=github)](https://coveralls.io/github/tthyer/globquire?branch=master)
 
 Allows requiring a group of files using a [glob](https://github.com/isaacs/node-glob) pattern, optionally execute it, and returns reference objects containing name, path, module, and results.
 
